@@ -15,6 +15,7 @@ class RingBuffer:
             index = self.order.index(self.list_of_items[0])
             self.list_of_items.pop(0)
             self.order[index] = item
+            self.list_of_items.append(item)
                 
 
     def get(self):
