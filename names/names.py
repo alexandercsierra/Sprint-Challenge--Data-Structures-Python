@@ -113,10 +113,11 @@ f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-duplicates = []  # Return the list of duplicates in this data structure
+str_duplicates = []  # Return the list of duplicates in this data structure
 
 str_dupes = set(names_1) & set(names_2)
-str_duplicates = str_dupes
+
+str_duplicates = list(str_dupes)
 
 new_end_time = time.time()
 print (f"{len(str_duplicates)} duplicates:\n\n{', '.join(str_duplicates)}\n\n")
